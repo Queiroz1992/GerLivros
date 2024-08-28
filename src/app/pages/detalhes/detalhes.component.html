@@ -1,3 +1,48 @@
-<p>
-  detalhes works!
-</p>
+<mat-card>
+
+  <div>
+    <h1 class="text-light">Detalhes Livro</h1>
+  </div>
+
+  <div *ngIf="livro">
+
+    <form>
+
+      <div class="input-box">
+        <mat-form-field>
+          <mat-label>Livro:</mat-label>
+          <input matInput type="text" class="form-control text-dark" value="{{livro.titulo}}" disabled>
+        </mat-form-field>
+      </div>
+
+      <div class="input-box">
+        <mat-form-field>
+          <mat-label>Autor:</mat-label>
+          <input matInput type="text" class="form-control  text-dark" value="{{livro.autor}}" disabled>
+        </mat-form-field>
+      </div>
+
+      <div class="input-box">
+        <mat-form-field>
+          <mat-label>Genero:</mat-label>
+          <input matInput type="text" class="form-control  text-dark" id="Livro" value="{{livro.genero}}" disabled>
+        </mat-form-field>
+      </div>
+
+      <div class="input-box">
+        <mat-form-field>
+          <mat-label>Ano de Publicação:</mat-label>
+          <input matInput type="text" class="form-control  text-dark" id="Livro" value="{{livro.anoPublicacao}}"
+            disabled>
+        </mat-form-field>
+      </div>
+
+      <div class="btn-box">
+        <a routerLink="" mat-raised-button>Voltar</a>
+      </div>
+
+    </form>
+  </div>
+
+
+</mat-card>

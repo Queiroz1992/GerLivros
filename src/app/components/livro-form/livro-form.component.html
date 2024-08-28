@@ -1,1 +1,48 @@
-<p>livro-form works!</p>
+<mat-card>
+    <h1>{{btnTitulo}}</h1>
+
+    <form [formGroup]="livroForm" (ngSubmit)="submit()" #formDir="ngForm">
+        <input type="hidden" value="" formControlName="id">
+
+        <div class="input-box">
+            <mat-form-field>
+                <mat-label>Titulo:</mat-label>
+                <input matInput id="titulo" type="text" class="form-control text-dark" formControlName="titulo"
+                    placeholder="Insira o titulo!" required>
+            </mat-form-field>
+        </div>
+
+        <div class="input-box">
+            <mat-form-field>
+                <mat-label>Autor:</mat-label>
+                <input matInput id="autor" type="text" class="form-control  text-dark" formControlName="autor"
+                    placeholder="Insira o autor!" required>
+            </mat-form-field>
+        </div>
+
+        <div class="input-box">
+            <mat-form-field>
+                <mat-label>Genero:</mat-label>
+                <input matInput id="genero" type="text" class="form-control  text-dark" formControlName="genero"
+                    placeholder="Insira o genero!" required>
+            </mat-form-field>
+        </div>
+
+        <div class="input-box">
+            <mat-form-field>
+                <mat-label>Ano de publicação:</mat-label>
+                <input matInput id="ano" type="number" class="form-control text-dark" formControlName="anoPublicacao"
+                    placeholder="Insira o ano de publicação!" required>
+            </mat-form-field>
+        </div>
+
+        <div class="btn-box">
+            <button type="submit" class="btn btn-success w-50" [disabled]="!livroForm.valid" mat-raised-button
+                color="accent">{{btnAcao}}</button>
+            <button class="btn btn-primary w-50" routerLink="" mat-raised-button>Voltar</button>
+        </div>
+
+
+    </form>
+
+</mat-card>

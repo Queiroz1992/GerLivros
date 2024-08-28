@@ -1,3 +1,4 @@
-<p>
-  editar works!
-</p>
+<div *ngIf="livro">
+  <app-livro-form [btnAcao]="btnAcao" [btnTitulo]="btnTitulo" [dadosLivro]="livro"
+    (onSubmit)="putLivro($event)"></app-livro-form>
+</div>
